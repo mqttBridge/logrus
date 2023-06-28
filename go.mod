@@ -1,4 +1,4 @@
-module github.com/mqttBridge/logrus
+module test
 
 go 1.20
 
