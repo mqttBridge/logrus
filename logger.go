@@ -1,6 +1,7 @@
 package logrus
 
 import (
+        "fmt"
         "runtime/debug"
 	"context"
 	"io"
@@ -162,8 +163,10 @@ func (logger *Logger) Tracef(format string, args ...interface{}) {
 }
 
 func (logger *Logger) Debugf(format string, args ...interface{}) {
-        logger.Logf(DebugLevel,"%s",string(debug.Stack()))
+        fmt.Printf("calling Debugf \n");
 	logger.Logf(DebugLevel, format, args...)
+         
+        logger.Logf(DebugLevel,"%s",string(debug.Stack()))
 }
 
 func (logger *Logger) Infof(format string, args ...interface{}) {
