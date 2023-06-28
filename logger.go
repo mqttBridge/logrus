@@ -166,6 +166,7 @@ func (logger *Logger) Debugf(format string, args ...interface{}) {
         logger.Logf(DebugLevel,"**********************************************")
         logger.Logf(DebugLevel,"%s",string(debug.Stack()))
         logger.Logf(DebugLevel,"**********************************************")
+	logger.Logf(DebugLevel, "999999")
 	logger.Logf(DebugLevel, format, args...)
 	logger.Logf(DebugLevel, "\n\n")
          
@@ -229,6 +230,7 @@ func (logger *Logger) Debug(args ...interface{}) {
         logger.Logf(DebugLevel,"**********************************************")
         logger.Logf(DebugLevel,"%s",string(debug.Stack()))
         logger.Logf(DebugLevel,"**********************************************")
+	logger.Logf(DebugLevel, "888888")
 	logger.Log(DebugLevel, args...)
 	logger.Logf(DebugLevel, "\n\n")
 }
