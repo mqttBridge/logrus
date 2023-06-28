@@ -1,4 +1,4 @@
-module test
+module github.com/mqttBridge/logrus
 
 go 1.20
 
@@ -10,7 +10,6 @@ require (
 
 require (
 	github.com/davecgh/go-spew v1.1.1 // indirect
-	github.com/mqttBridge/logrus v0.0.0-20230628043729-8ccccecbee2a // indirect
 	github.com/pmezard/go-difflib v1.0.0 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 )
