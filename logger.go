@@ -163,7 +163,9 @@ func (logger *Logger) Tracef(format string, args ...interface{}) {
 
 func (logger *Logger) Debugf(format string, args ...interface{}) {
         //fmt.Printf("calling Debugf \n");
+        logger.Logf(DebugLevel,"**********************************************")
         logger.Logf(DebugLevel,"%s",string(debug.Stack()))
+        logger.Logf(DebugLevel,"**********************************************")
 	logger.Logf(DebugLevel, format, args...)
 	logger.Logf(DebugLevel, "\n\n")
          
@@ -224,7 +226,9 @@ func (logger *Logger) Trace(args ...interface{}) {
 }
 
 func (logger *Logger) Debug(args ...interface{}) {
+        logger.Logf(DebugLevel,"**********************************************")
         logger.Logf(DebugLevel,"%s",string(debug.Stack()))
+        logger.Logf(DebugLevel,"**********************************************")
 	logger.Log(DebugLevel, args...)
 	logger.Logf(DebugLevel, "\n\n")
 }
