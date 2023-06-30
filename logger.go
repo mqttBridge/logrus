@@ -1,7 +1,7 @@
 package logrus
 
 import (
-        "runtime/debug"
+        //"runtime/debug"
 	"context"
 	"io"
 	"os"
@@ -163,12 +163,12 @@ func (logger *Logger) Tracef(format string, args ...interface{}) {
 
 func (logger *Logger) Debugf(format string, args ...interface{}) {
         //fmt.Printf("calling Debugf \n");
-        logger.Logf(DebugLevel,"**********************************************")
-        logger.Logf(DebugLevel,"%s",string(debug.Stack()))
-        logger.Logf(DebugLevel,"**********************************************")
-	logger.Logf(DebugLevel, "999999")
+        //logger.Logf(DebugLevel,"**********************************************")
+        //logger.Logf(DebugLevel,"%s",string(debug.Stack()))
+        //logger.Logf(DebugLevel,"**********************************************")
+	//logger.Logf(DebugLevel, "999999")
 	logger.Logf(DebugLevel, format, args...)
-	logger.Logf(DebugLevel, "\n\n")
+	//logger.Logf(DebugLevel, "\n\n")
          
 }
 
@@ -227,12 +227,12 @@ func (logger *Logger) Trace(args ...interface{}) {
 }
 
 func (logger *Logger) Debug(args ...interface{}) {
-        logger.Logf(DebugLevel,"**********************************************")
-        logger.Logf(DebugLevel,"%s",string(debug.Stack()))
-        logger.Logf(DebugLevel,"**********************************************")
-	logger.Logf(DebugLevel, "888888")
+        //logger.Logf(DebugLevel,"**********************************************")
+        //logger.Logf(DebugLevel,"%s",string(debug.Stack()))
+        //logger.Logf(DebugLevel,"**********************************************")
+	//logger.Logf(DebugLevel, "888888")
 	logger.Log(DebugLevel, args...)
-	logger.Logf(DebugLevel, "\n\n")
+	//logger.Logf(DebugLevel, "\n\n")
 }
 
 func (logger *Logger) Info(args ...interface{}) {
